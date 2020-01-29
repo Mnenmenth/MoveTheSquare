@@ -37,6 +37,5 @@ public class GameController {
 
 		square.setX(square.getX() + model.getSquareDx());
 		square.setY(square.getY() + model.getSquareDy());
-
 	}
 }

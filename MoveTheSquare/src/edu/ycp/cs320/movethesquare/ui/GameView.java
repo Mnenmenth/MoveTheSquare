@@ -56,6 +56,8 @@ public class GameView extends JPanel {
 		if (mouseLoc != null) {
 			controller.computeSquareMoveDirection(model, square, mouseLoc.getX(), mouseLoc.getY());
 		}
+	
+		
 		controller.moveSquare(model, square);
 		repaint();
 	}
@@ -68,7 +70,6 @@ public class GameView extends JPanel {
 		// djh2-YCPlaptop: change from RED to YELLOW
 		// earl-desktop: changed from YELLOW to MAGENTA
 		g.setColor(Color.MAGENTA);
-
 		Square square = model.getSquare();
 		
 		g.fillRect((int) square.getX(), (int) square.getY(), (int) square.getWidth(), (int) square.getHeight());
@@ -83,7 +84,8 @@ public class GameView extends JPanel {
 				model.setHeight(480.0);
 				
 				Square square = new Square();
-				square.setX(300.0);
+				//dpalmieri-YCPlaptop: change from 300.0 to 400.0
+				square.setX(400.0);
 				square.setY(220.0);
 				// earl-desktop: changed from 40.0 to 2.0
 				square.setWidth(2.0);
