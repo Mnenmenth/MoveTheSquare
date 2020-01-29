@@ -29,5 +29,25 @@ public class GameController {
 	public void moveSquare(Game model, Square square) {
 		square.setX(square.getX() + model.getSquareDx());
 		square.setY(square.getY() + model.getSquareDy());
+		
+		//dpalmieri-YCPlaptop added checks to see if sqaure is out of bounds
+		
+		if(square.getX() + model.getSquareDx() > model.getWidth() - square.getWidth()){
+			square.setX(model.getWidth()- square.getWidth());
+		}
+		
+		if(square.getY() + model.getSquareDy() > model.getHeight() - square.getHeight() ) {
+			square.setY(model.getHeight() - square.getHeight());
+		}
+		
+		if(square.getY() + model.getSquareDy() < 0) {
+			square.setY(0);
+		}
+		
+		if(square.getX() + model.getSquareDy() < 0) {
+			square.setX(0);
+		}
+		
+	
 	}
 }
